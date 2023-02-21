@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    /* we need to override bootsrap variables */
+  --bs-body-font-size: 17px;
+  --bs-body-font-family: 'Roboto', sans-serif;
+}

@@ -1,22 +1,12 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- Content that will be displayed app-wide -->
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">First page</RouterLink>
-        <br>
-        <RouterLink to="/second">Second page</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <h1 class="text-center">TODO</h1>
 
-  <!-- This displays content for current page -->
-  <RouterView />
+    <!-- This displays content for current page -->
+    <RouterView />
+  </div>
 </template>
-
-<style scoped>
-</style>
