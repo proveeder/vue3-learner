@@ -31,21 +31,21 @@ export default {
 
 <template>
   <main>
-    <div class="row">
+    <div>
       <Alert msg="TODO item can't be blank" v-if="showAlert"/>
 
-      <div class="column text-center">
-        <input type="text" class="form-control" placeholder="New item" aria-label="Username" aria-describedby="basic-addon1"
+      <div>
+        <input
         v-model="newTodo">
         <br>
-        <button type="button" class="btn btn-light" @click="addItem()">
+        <button @click="addItem()">
           Add to list
         </button>
       </div>
 
-      <div class="column">
-        <ul class="list-group">
-          <li class="list-group-item text-center" v-for="(todo) in todos">
+      <div>
+        <ul>
+          <li v-for="(todo) in todos">
             {{ todo }}
           </li>
         </ul>

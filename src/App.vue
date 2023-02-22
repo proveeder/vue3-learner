@@ -3,8 +3,8 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="container">
-    <h1 class="text-center">TODO</h1>
+  <div>
+    <h1>TODO</h1>
 
     <!-- This displays content for current page -->
     <RouterView />
