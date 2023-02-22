@@ -34,13 +34,14 @@ export default {
     <div>
       <Alert msg="TODO item can't be blank" v-if="showAlert"/>
 
-      <div>
-        <input
-        v-model="newTodo">
-        <br>
-        <button @click="addItem()">
-          Add to list
-        </button>
+      <div class="grid">
+        <div><input v-model="newTodo"></div>
+        <div>
+          <button class="contrast"
+          @click="addItem()">
+            Add to list
+          </button>
+        </div>
       </div>
 
       <div>

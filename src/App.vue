@@ -3,10 +3,12 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
-    <h1>TODO</h1>
+  <main class="container">
+    <div>
+      <h1>TODO LIST</h1>
 
-    <!-- This displays content for current page -->
-    <RouterView />
-  </div>
+      <!-- This displays content for current page -->
+      <RouterView />
+    </div>
+  </main>
 </template>
