@@ -9,7 +9,7 @@ export default {
   },
   data() {
     return {
-      newTodo: '',
+      todoId: 1,
       hideCompleted: false,
       todos: [],
       showAlert: false
@@ -23,19 +23,32 @@ export default {
     }
   },
   methods: {
-    addTodo() {
-      if (this.newTodo === '') {
+    async fetchTodo() {
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/todos/${this.todoId}`
+      )
+      const title = (await res.json()).title
+      this.todos.push({ id: id++, text: title, done: false })
+    },
+    addTodo(text) {
+      if (text) {
+        this.todos.push({ id: id++, text: text, done: false })
+        this.showAlert = false
+      } else {
         this.showAlert = true
         setTimeout(() => {
           this.showAlert = false
-        }, 3000)
-        return
+        }, 2000)
+        this.showAlert = false
       }
-      this.todos.push({ id: id++, text: this.newTodo, done: false })
-      this.newTodo = ''
     },
     removeTodo(todo) {
       this.todos = this.todos.filter((t) => t !== todo)
+    }
+  },
+  watch: {
+    todoId(newId) {
+      this.fetchTodo()
     }
   }
 }
@@ -45,10 +58,12 @@ export default {
   <Alert msg="TODO item can't be blank" v-if="showAlert"/>
 
   <div class="grid">    
-    <form @submit.prevent="addTodo">
-      <input v-model="newTodo">
-      <button class="contrast">Add Todo</button>
-    </form>
+    <div>
+      <button class="contrast"
+        @click="this.todoId += 1">
+        Add Todo
+      </button>
+    </div>
     <div>
       <button @click="hideCompleted = !hideCompleted">
         {{ hideCompleted ? 'Show all' : 'Hide completed' }}
