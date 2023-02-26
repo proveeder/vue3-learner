@@ -79,7 +79,7 @@ export default {
   </ul>
 </template>
 
-<style>
+<style scoped>
 .done {
   text-decoration: line-through;
 }
