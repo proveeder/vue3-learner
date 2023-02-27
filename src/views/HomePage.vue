@@ -1,12 +1,14 @@
 <script>
 import Alert from '../components/Alert.vue'
 import FetchButtom from '../components/buttons/FetchButton.vue'
+import PageFooter from '../components/PageFooter.vue'
 
 let id = 0
 
 export default {
   components: {
     Alert,
+    PageFooter,
     FetchButtom
   },
   data() {
@@ -59,7 +61,7 @@ export default {
 <template>
   <Alert msg="TODO item can't be blank" v-if="showAlert"/>
 
-  <div class="grid">    
+  <div class="grid">
     <FetchButtom @require-fetch="() => this.todoId += 1"/>
     <div>
       <button @click="hideCompleted = !hideCompleted">
@@ -74,6 +76,8 @@ export default {
       <button class="secondary" @click="removeTodo(todo)">Delete</button>
     </li>
   </ul>
+
+  <PageFooter>Created by Alex</PageFooter>
 </template>
 
 <style scoped>
