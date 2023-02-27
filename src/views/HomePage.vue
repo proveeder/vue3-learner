@@ -1,11 +1,13 @@
 <script>
 import Alert from '../components/Alert.vue'
+import FetchButtom from '../components/buttons/FetchButton.vue'
 
 let id = 0
 
 export default {
   components: {
-    Alert
+    Alert,
+    FetchButtom
   },
   data() {
     return {
@@ -58,12 +60,7 @@ export default {
   <Alert msg="TODO item can't be blank" v-if="showAlert"/>
 
   <div class="grid">    
-    <div>
-      <button class="contrast"
-        @click="this.todoId += 1">
-        Add Todo
-      </button>
-    </div>
+    <FetchButtom @require-fetch="() => this.todoId += 1"/>
     <div>
       <button @click="hideCompleted = !hideCompleted">
         {{ hideCompleted ? 'Show all' : 'Hide completed' }}
