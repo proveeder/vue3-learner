@@ -10,7 +10,7 @@ export default {
     };
   },
   async mounted() {
-    this.articles = await NewsApi.fetchArticles();
+    this.articles = await NewsApi.fetchArticles("entertainment");
   },
 };
 </script>
@@ -18,4 +18,3 @@ export default {
 <template>
   <ArtcilesList :articles="articles" />
 </template>
-e>

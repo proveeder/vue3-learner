@@ -18,19 +18,14 @@ const router = createRouter({
       component: () => import("../views/SportsView.vue"),
     },
     {
-      path: "/games",
-      name: "games",
-      component: () => import("../views/GamesView.vue"),
+      path: "/entertainment",
+      name: "erntertainment",
+      component: () => import("../views/EntertainmentView.vue"),
     },
     {
       path: "/science",
       name: "science",
       component: () => import("../views/ScienceView.vue"),
-    },
-    {
-      path: "/music",
-      name: "music",
-      component: () => import("../views/MusicView.vue"),
     },
   ],
 });

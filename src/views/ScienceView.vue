@@ -10,7 +10,7 @@ export default {
     };
   },
   async mounted() {
-    this.articles = await NewsApi.fetchArticles();
+    this.articles = await NewsApi.fetchArticles("science");
   },
 };
 </script>
