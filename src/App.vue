@@ -15,13 +15,13 @@ import { RouterLink, RouterView } from "vue-router";
           <RouterLink to="/sports">Sports</RouterLink>
         </a>
         <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          Games
+          <RouterLink to="/games">Games</RouterLink>
         </a>
         <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          Science
+          <RouterLink to="/science">Science</RouterLink>
         </a>
         <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-          Music
+          <RouterLink to="/music">Music</RouterLink>
         </a>
       </div>
     </div>

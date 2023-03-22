@@ -17,7 +17,22 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/SportsView.vue"),
     },
+    {
+      path: "/games",
+      name: "games",
+      component: () => import("../views/GamesView.vue"),
+    },
+    {
+      path: "/science",
+      name: "science",
+      component: () => import("../views/ScienceView.vue"),
+    },
+    {
+      path: "/music",
+      name: "music",
+      component: () => import("../views/MusicView.vue"),
+    },
   ],
-})
+});
 
-export default router
+export default router;
