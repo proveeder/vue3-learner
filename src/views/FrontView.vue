@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <template>
   <div class="bg-gray-100 h-screen">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -12,7 +16,7 @@
           Log in
         </button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
-          Sign up
+          <RouterLink to="/register">Sign up</RouterLink>
         </button>
       </div>
     </div>
