@@ -13,7 +13,7 @@ import { RouterLink } from "vue-router";
       </p>
       <div class="space-x-4">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
-          Log in
+          <RouterLink to="/login">Sign in</RouterLink>
         </button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
           <RouterLink to="/register">Sign up</RouterLink>
